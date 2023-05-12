@@ -114,27 +114,66 @@ val name = "Alice"
 val age = 30
 val message = "My name is $name and I am $age years old."
 ```
-#### Control Flow
+### Control Flow
 * Kotlin has several control flow constructs, including if/else statements, for and while loops, and when expressions:
 
+* Conditional expressions: In Kotlin, you can use a conditional expression instead of an if-else statement in cases where the result of the expression is either of two values. For example:
+
 ```
-// if/else statement
-val score = 80
-val grade = if (score >= 90) "A" else if (score >= 80) "B" else "C"
+val max = if (a > b) a else b
+```
+* When expression: Kotlin's when expression is similar to a switch statement in other languages, but it's more powerful and flexible. You can use it to match any type of value, not just integers, and you can use it with ranges, types, and arbitrary expressions. For example:
 
-// for loop
-val numbers = arrayOf(1, 2, 3, 4, 5)
-for (number in numbers) {
-    println(number)
+```
+when (x) {
+    1 -> println("One")
+    2 -> println("Two")
+    in 3..10 -> println("Between 3 and 10")
+    is String -> println("String")
+    else -> println("Other")
 }
+```
+* Loops: Kotlin supports the usual while and for loops found in most programming languages, but it also has some additional features such as the ability to loop over ranges and collections. For example:
 
-// while loop
-var i = 0
-while (i < 10) {
+```
+for (i in 1..10) {
     println(i)
-    i++
 }
 
-// when expression
-val
+val list = listOf("foo", "bar", "baz")
+for (s in list) {
+    println(s)
+}
+```
+* Return and Jump: Kotlin supports a few additional ways to control the flow of execution, such as the return and break statements, as well as the continue and label statements. For example:
+
+```
+fun foo() {
+    list.forEach {
+        if (it == "bar") return
+        println(it)
+    }
+}
+
+loop@ for (i in 1..10) {
+    for (j in 1..10) {
+        if (i == 5 && j == 5) break@loop
+        println("$i $j")
+    }
+}
+```
+* Exception handling: Kotlin has built-in support for exceptions and offers a try-catch-finally statement to handle them. It also has a throw expression to manually throw an exception. For example:
+
+```
+try {
+    // code that might throw an exception
+} catch (e: Exception) {
+    // handle the exception
+} finally {
+    // code that always runs, regardless of whether an exception was thrown or not
+}
+
+fun foo() {
+    val input = readLine() ?: throw IllegalArgumentException("Input must not be null")
+}
 ```
