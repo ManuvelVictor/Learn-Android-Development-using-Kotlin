@@ -58,7 +58,6 @@ In this section, we will cover the basic syntax and data types in Kotlin.
 ## Variables
 In Kotlin, you can declare variables using either the var or val keyword. Variables declared with var can be reassigned, while those declared with val cannot be reassigned.
 
-## kotlin
 ```
 var myVariable = "Hello, world!"
 myVariable = "Goodbye, world!" // OK
