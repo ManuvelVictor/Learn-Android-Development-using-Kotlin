@@ -49,3 +49,92 @@ Prerequisites
 ## Conclusion
 
 That's it! You have now successfully set up Android Studio for Kotlin development. Start building amazing Android apps using Kotlin and make the most of the powerful features it offers.
+
+# Basic Kotlin Syntax and Data Types
+Kotlin is a statically typed programming language that supports both object-oriented and functional programming paradigms. It was created to address some of the shortcomings of Java, and has quickly become a popular language for Android app development.
+
+In this section, we will cover the basic syntax and data types in Kotlin.
+
+## Variables
+In Kotlin, you can declare variables using either the var or val keyword. Variables declared with var can be reassigned, while those declared with val cannot be reassigned.
+
+## kotlin
+```
+var myVariable = "Hello, world!"
+myVariable = "Goodbye, world!" // OK
+
+val myConstant = "Hello, Kotlin!"
+myConstant = "Goodbye, Kotlin!" // Error: Val cannot be reassigned
+```
+### Data Types  
+Kotlin has several built-in data types:
+
+* Byte: 8-bit signed integer
+* Short: 16-bit signed integer
+* Int: 32-bit signed integer
+* Long: 64-bit signed integer
+* Float: 32-bit floating point number
+* Double: 64-bit floating point number
+* Char: a single 16-bit Unicode character
+* Boolean: true or false
+```
+val myByte: Byte = 127
+val myShort: Short = 32767
+val myInt: Int = 2147483647
+val myLong: Long = 9223372036854775807L
+val myFloat: Float = 3.1415927f
+val myDouble: Double = 3.14159265358979323846
+val myChar: Char = 'A'
+val myBoolean: Boolean = true
+```
+### Type Inference
+In Kotlin, you can use type inference to let the compiler determine the data type of a variable based on its initial value:
+
+```
+val myString = "Hello, Kotlin!"
+val myInt = 42
+```
+#### Nullable Types
+* Kotlin has a concept of nullable types, which allows variables to have a null value. You can declare a variable as nullable by adding a ? after the data type:
+
+```
+var myNullableString: String? = null
+```
+*  To access the value of a nullable variable, you must use either the safe call operator (?.) or the not-null assertion operator (!!):
+
+```
+val length = myNullableString?.length // returns null if myNullableString is null
+val length = myNullableString!!.length // throws a NullPointerException if myNullableString is null
+```
+#### String Interpolation
+* Kotlin supports string interpolation, which allows you to embed variables and expressions within a string:
+
+```
+val name = "Alice"
+val age = 30
+val message = "My name is $name and I am $age years old."
+```
+#### Control Flow
+* Kotlin has several control flow constructs, including if/else statements, for and while loops, and when expressions:
+
+```
+// if/else statement
+val score = 80
+val grade = if (score >= 90) "A" else if (score >= 80) "B" else "C"
+
+// for loop
+val numbers = arrayOf(1, 2, 3, 4, 5)
+for (number in numbers) {
+    println(number)
+}
+
+// while loop
+var i = 0
+while (i < 10) {
+    println(i)
+    i++
+}
+
+// when expression
+val
+```
