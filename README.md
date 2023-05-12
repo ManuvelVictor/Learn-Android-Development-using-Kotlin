@@ -34,7 +34,7 @@ Prerequisites
 * Latest version of Android Studio.
 * Basic knowledge of Kotlin programming language.
 ## Steps 
-* Download and install Android Studio: You can download the latest version of Android Studio from the official website of Android Studio. Follow the on-screen instructions to install it on your system.
+* Download and install Android Studio: You can download the latest version of Android Studio from the official website of [Android Studio](https://developer.android.com/studio). Follow the on-screen instructions to install it on your system.
 
 * Create a new project: Once you have installed Android Studio, open it and select "Start a new Android Studio project" from the welcome screen. Give your project a name and select the target Android device.
 
