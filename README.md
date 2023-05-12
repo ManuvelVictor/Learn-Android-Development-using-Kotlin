@@ -26,3 +26,26 @@ If you're new to Kotlin and Android development, here are some resources to help
 * Kotlin Android Fundamentals codelab: This codelab by Google is a step-by-step guide to building a simple Android app using Kotlin. It covers the basics of Android development, as well as Kotlin-specific features like null safety and extension functions.
 
 * Android Developers on YouTube: The Android Developers channel on YouTube is a great resource for learning Android development. It includes videos on a wide range of topics, including Kotlin, architecture, testing, and more.
+
+# Setting up Android Studio for Kotlin Development
+Android Studio is the official Integrated Development Environment (IDE) for developing Android applications. It has built-in support for Kotlin, making it an ideal tool for Kotlin development.
+
+Prerequisites
+* Latest version of Android Studio.
+* Basic knowledge of Kotlin programming language.
+## Steps 
+* Download and install Android Studio: You can download the latest version of Android Studio from the official website of Android Studio. Follow the on-screen instructions to install it on your system.
+
+* Create a new project: Once you have installed Android Studio, open it and select "Start a new Android Studio project" from the welcome screen. Give your project a name and select the target Android device.
+
+* Configure the project: Choose the project template that you want to use and set up the basic project configuration such as package name, location of the project, etc.
+
+* Configure Kotlin: In the Configure your project window, select the "Include Kotlin support" checkbox and choose the version of Kotlin you want to use. You can choose to add a Kotlin activity to your project if you want.
+
+* Sync the project: Android Studio will sync the project and set up the necessary files and dependencies.
+
+* Start coding: You are now ready to start coding in Kotlin. Create a new Kotlin class or modify the existing Java classes to use Kotlin.
+
+## Conclusion
+
+That's it! You have now successfully set up Android Studio for Kotlin development. Start building amazing Android apps using Kotlin and make the most of the powerful features it offers.
