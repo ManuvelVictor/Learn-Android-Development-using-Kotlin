@@ -176,3 +176,41 @@ fun foo() {
     val input = readLine() ?: throw IllegalArgumentException("Input must not be null")
 }
 ```
+# Understanding the Activity Lifecycle in Android Development
+
+The Activity lifecycle is a crucial concept for Android developers to understand. Activities are the building blocks of any Android application, and knowing how they are created, destroyed, and maintained is essential for building robust and efficient apps. This guide will provide an overview of the Activity lifecycle, including its different states and how to manage them.
+
+## Overview
+
+An Activity is a single, focused thing that the user can do. It represents a single screen with a user interface. When an application is launched, the Android system creates a new Activity instance to display the UI. The Activity then goes through a series of lifecycle states as it is created, displayed, and eventually destroyed. Understanding the Activity lifecycle is crucial for writing high-quality Android applications.
+
+### States
+
+The Activity lifecycle consists of four different states:
+
+* Created - The Activity is created but not yet visible to the user.
+* Started - The Activity is visible to the user but not yet in the foreground.
+* Resumed - The Activity is in the foreground and interacting with the user.
+* Destroyed - The Activity is destroyed and removed from memory.
+Each state is represented by a callback method that the system calls when the Activity transitions to that state.
+
+### Callbacks
+
+There are seven callbacks that correspond to the four states of the Activity lifecycle. These callbacks are:
+
+* onCreate() - Called when the Activity is created for the first time.
+* onStart() - Called when the Activity becomes visible to the user.
+* onResume() - Called when the Activity is in the foreground and interacting with the user.
+* onPause() - Called when the Activity is no longer in the foreground, but still visible to the user.
+* onStop() - Called when the Activity is no longer visible to the user.
+* onRestart() - Called when the Activity is stopped and then started again.
+* onDestroy() - Called when the Activity is destroyed and removed from memory.
+* Managing the Lifecycle
+
+To manage the Activity lifecycle, it is important to understand how the different states and callbacks work together. For example, if an Activity is paused, it may be destroyed if the system needs to free up memory. This means that any data or state information stored in the Activity may be lost. To avoid this, developers can use various techniques to save and restore the state of an Activity, such as onSaveInstanceState() and onRestoreInstanceState().
+
+In addition, it is important to ensure that resources are released properly when an Activity is destroyed. This can be done by overriding the onDestroy() method and releasing any resources, such as database connections, file handles, or network sockets.
+
+### Conclusion
+
+The Activity lifecycle is a fundamental concept in Android development. By understanding how Activities are created, destroyed, and maintained, developers can create robust and efficient applications that provide a great user experience. This guide provides a basic overview of the Activity lifecycle, but it is important to dig deeper into the documentation and examples to fully understand the topic.
