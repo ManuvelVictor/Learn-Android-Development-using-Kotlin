@@ -353,6 +353,9 @@ println(person.age) // error: cannot access 'age': it is private in 'Person'
 ```
 
 In this example, the `Person` class has two private properties, `name` and `age`. The `introduce()` method is a public method that can be called from outside the `Person` class to introduce the person. The `name` and `age` properties cannot be accessed from outside the `Person` class because they are private. To create an object of the `Person` class, you can call its constructor and pass in the `name` and `age` parameters.
+
+# Intro to Android specific Topics
+
 ## Activities
 An activity is a single screen that a user can interact with. It is defined by a Java class that extends the Activity class or one of its subclasses. Activities are typically used to implement different screens in an app, such as a login screen, a settings screen, or a list of items. Each activity has a corresponding layout file that defines the user interface for that screen.
 
