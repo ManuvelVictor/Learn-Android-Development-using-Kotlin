@@ -176,6 +176,55 @@ fun foo() {
     val input = readLine() ?: throw IllegalArgumentException("Input must not be null")
 }
 ```
+## Activities
+An activity is a single screen that a user can interact with. It is defined by a Java class that extends the Activity class or one of its subclasses. Activities are typically used to implement different screens in an app, such as a login screen, a settings screen, or a list of items. Each activity has a corresponding layout file that defines the user interface for that screen.
+
+An activity can be started by an intent, which is a message that Android uses to communicate between different components of an app. For example, an intent can be used to start a new activity in response to a user action, such as clicking a button.
+
+## Layouts
+A layout defines the structure and appearance of user interface elements in an activity. It is defined in an XML file that describes the different views and how they are arranged. Views are the individual UI components such as buttons, text fields, images, and more. A layout can be thought of as a container for these views, specifying their size, position, and other attributes.
+
+Android provides a variety of pre-built layouts that developers can use to create their user interfaces, such as `LinearLayout`, `RelativeLayout`, and `ConstraintLayout`. Developers can also create their own custom layouts by extending the ViewGroup class.
+
+To link an activity with its layout, the activity class must call the `setContentView()` method in its `onCreate()` method, passing in the ID of the layout file as an argument. This tells Android to inflate the layout and display it on the screen.
+
+In Android development, the project structure and its important files are essential for organizing and building a successful app. Here's a breakdown of the most important files and directories in an Android project:
+
+## App Directory
+The `app` directory is where most of the project's files are located. It contains subdirectories for the source code, resources, and configurations for the app.
+
+### Manifest File
+The `AndroidManifest.xml` file is the most important file in the `app` directory. It defines essential information about the app, such as its package name, version, permissions, and activities. The Android system uses this file to launch the app and enforce its security policies.
+
+### Java Directory
+The `java` directory contains the source code for the app, organized in packages. This is where you write the Java or Kotlin code for the app's logic and functionality. By default, the package name is based on the app's package name, but you can create your own package structure to organize your code.
+
+### Res Directory
+The `res` directory contains all the resources used by the app, such as images, layouts, strings, and styles. It is organized into subdirectories based on resource type. For example, the `drawable` directory contains images, while the `layout` directory contains XML files that define the layout of user interface elements.
+
+### Assets Directory
+The `assets` directory contains raw asset files that are bundled with the app. This is where you would store files that are not compiled into a binary format, such as raw audio or video files.
+
+### Gradle Scripts
+The `build.gradle` files in the app directory are used to configure and build the app. There are two `build.gradle` files: one for the app module and one for the project. These files contain information about the build process, dependencies, and other configurations.
+
+## Gradle Wrapper
+The `gradlew` and `gradlew.bat` files are the Gradle wrapper scripts that allow you to run Gradle tasks without installing Gradle on your system. These files are included in the root directory of the project.
+
+## Other Directories
+There are a few other directories in the project that are not part of the `app` directory:
+
+### Gradle Directory
+The `gradle` directory contains files related to the Gradle build system, such as the `wrapper` directory that stores the Gradle wrapper files.
+
+### .idea Directory
+The `.idea` directory contains configuration files for IntelliJ IDEA, the IDE used by Android Studio. This directory is generated automatically and should not be modified manually.
+
+### Build Directory
+The `build` directory is where the output of the build process is stored, such as the compiled code and the APK file.
+
+In summary, the `app` directory is where most of the important files in an Android project are located. The `AndroidManifest.xml` file, `java` directory, `res` directory, and Gradle scripts are the most essential files for creating an Android app. The Gradle wrapper, `gradle` directory, `.idea` directory, and `build` directory are important for the build process.
+
 # Understanding the Activity Lifecycle in Android Development
 
 The Activity lifecycle is a crucial concept for Android developers to understand. Activities are the building blocks of any Android application, and knowing how they are created, destroyed, and maintained is essential for building robust and efficient apps. This guide will provide an overview of the Activity lifecycle, including its different states and how to manage them.
