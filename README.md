@@ -176,6 +176,104 @@ fun foo() {
     val input = readLine() ?: throw IllegalArgumentException("Input must not be null")
 }
 ```
+
+#### Object-oriented programming (OOP) is a programming paradigm that focuses on modeling the real world as objects with properties and behaviors. Kotlin is an object-oriented language that fully supports OOP concepts. Here are some of the most important OOP concepts to learn for Kotlin Android development:
+
+## Classes and Objects
+A class is a blueprint for creating objects. It defines the properties and methods that objects of that class will have. In Kotlin, you create a class using the `class` keyword. Here's an example:
+
+```kotlin
+class Person(name: String, age: Int) {
+    var name = name
+    var age = age
+
+    fun sayHello() {
+        println("Hello, my name is $name and I am $age years old")
+    }
+}
+```
+
+In this example, the `Person` class has two properties, `name` and `age`, and one method, `sayHello()`. To create an object of this class, you can use the `Person` constructor, like this:
+
+```kotlin
+val person = Person("John Doe", 30)
+person.sayHello() // prints "Hello, my name is John Doe and I am 30 years old"
+```
+
+## Inheritance
+Inheritance is a mechanism that allows you to create a new class based on an existing class. The new class, called a subclass, inherits the properties and methods of the existing class, called the superclass. In Kotlin, you use the `:` symbol to indicate that a class inherits from another class. Here's an example:
+
+```kotlin
+open class Vehicle {
+    open fun drive() {
+        println("Driving...")
+    }
+}
+
+class Car : Vehicle() {
+    override fun drive() {
+        println("Driving a car...")
+    }
+}
+```
+
+In this example, the `Vehicle` class has one method, `drive()`, which is overridden in the `Car` class. The `Car` class inherits from the `Vehicle` class using the `:` symbol. To create an object of the `Car` class, you can simply call its constructor:
+
+```kotlin
+val car = Car()
+car.drive() // prints "Driving a car..."
+```
+
+## Polymorphism
+Polymorphism is a mechanism that allows objects of different classes to be treated as if they were objects of the same class. There are two types of polymorphism: static and dynamic. Static polymorphism is achieved through method overloading, while dynamic polymorphism is achieved through method overriding.
+
+Method Overloading Example:
+
+```kotlin
+class Calculator {
+    fun add(x: Int, y: Int): Int {
+        return x + y
+    }
+
+    fun add(x: Double, y: Double): Double {
+        return x + y
+    }
+}
+
+val calculator = Calculator()
+println(calculator.add(1, 2)) // prints 3
+println(calculator.add(1.0, 2.0)) // prints 3.0
+```
+
+Method Overriding Example:
+
+```kotlin
+open class Animal {
+    open fun makeSound() {
+        println("Animal is making a sound...")
+    }
+}
+
+class Cat : Animal() {
+    override fun makeSound() {
+        println("Meow!")
+    }
+}
+
+class Dog : Animal() {
+    override fun makeSound() {
+        println("Woof!")
+    }
+}
+
+val cat: Animal = Cat()
+val dog: Animal = Dog()
+cat.makeSound() // prints "Meow!"
+dog.makeSound() // prints "Woof!"
+```
+
+In this example, the `Animal` class has one method, `makeSound()`, which is overridden in the `Cat` and `Dog` classes. The `Cat` and `Dog` objects are treated as objects of the `Animal`
+
 ## Activities
 An activity is a single screen that a user can interact with. It is defined by a Java class that extends the Activity class or one of its subclasses. Activities are typically used to implement different screens in an app, such as a login screen, a settings screen, or a list of items. Each activity has a corresponding layout file that defines the user interface for that screen.
 
