@@ -571,7 +571,7 @@ These are some of the most commonly used Android layouts, but there are several 
 
 In conclusion, XML is an important part of Android development as it allows you to define the visual layout of your app's user interface. The Android SDK provides a set of predefined layouts that you can use, each with its own specific use case. By using the right layout for your specific needs, you can create visually appealing and functional user interfaces for your Android app.
 
-## Views XML Android Development
+## Views in Android Development
 
 In Android development, a view is a fundamental building block of the user interface. It represents a rectangular area on the screen and can be used to display text, images, buttons, and other interactive elements.
 
