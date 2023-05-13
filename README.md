@@ -356,18 +356,7 @@ In this example, the `Person` class has two private properties, `name` and `age`
 
 # Android Basic Topics
 
-## Activities
-An activity is a single screen that a user can interact with. It is defined by a Java class that extends the Activity class or one of its subclasses. Activities are typically used to implement different screens in an app, such as a login screen, a settings screen, or a list of items. Each activity has a corresponding layout file that defines the user interface for that screen.
-
-An activity can be started by an intent, which is a message that Android uses to communicate between different components of an app. For example, an intent can be used to start a new activity in response to a user action, such as clicking a button.
-
-## Layouts
-A layout defines the structure and appearance of user interface elements in an activity. It is defined in an XML file that describes the different views and how they are arranged. Views are the individual UI components such as buttons, text fields, images, and more. A layout can be thought of as a container for these views, specifying their size, position, and other attributes.
-
-Android provides a variety of pre-built layouts that developers can use to create their user interfaces, such as `LinearLayout`, `RelativeLayout`, and `ConstraintLayout`. Developers can also create their own custom layouts by extending the ViewGroup class.
-
-To link an activity with its layout, the activity class must call the `setContentView()` method in its `onCreate()` method, passing in the ID of the layout file as an argument. This tells Android to inflate the layout and display it on the screen.
-
+## Project Structure
 In Android development, the project structure and its important files are essential for organizing and building a successful app. Here's a breakdown of the most important files and directories in an Android project:
 
 ## App Directory
@@ -404,6 +393,18 @@ The `.idea` directory contains configuration files for IntelliJ IDEA, the IDE us
 The `build` directory is where the output of the build process is stored, such as the compiled code and the APK file.
 
 In summary, the `app` directory is where most of the important files in an Android project are located. The `AndroidManifest.xml` file, `java` directory, `res` directory, and Gradle scripts are the most essential files for creating an Android app. The Gradle wrapper, `gradle` directory, `.idea` directory, and `build` directory are important for the build process.
+
+## Activities
+An activity is a single screen that a user can interact with. It is defined by a Java class that extends the Activity class or one of its subclasses. Activities are typically used to implement different screens in an app, such as a login screen, a settings screen, or a list of items. Each activity has a corresponding layout file that defines the user interface for that screen.
+
+An activity can be started by an intent, which is a message that Android uses to communicate between different components of an app. For example, an intent can be used to start a new activity in response to a user action, such as clicking a button.
+
+## Layouts
+A layout defines the structure and appearance of user interface elements in an activity. It is defined in an XML file that describes the different views and how they are arranged. Views are the individual UI components such as buttons, text fields, images, and more. A layout can be thought of as a container for these views, specifying their size, position, and other attributes.
+
+Android provides a variety of pre-built layouts that developers can use to create their user interfaces, such as `LinearLayout`, `RelativeLayout`, and `ConstraintLayout`. Developers can also create their own custom layouts by extending the ViewGroup class.
+
+To link an activity with its layout, the activity class must call the `setContentView()` method in its `onCreate()` method, passing in the ID of the layout file as an argument. This tells Android to inflate the layout and display it on the screen.
 
 # Understanding the Activity Lifecycle in Android Development
 
