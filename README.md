@@ -354,6 +354,72 @@ println(person.age) // error: cannot access 'age': it is private in 'Person'
 
 In this example, the `Person` class has two private properties, `name` and `age`. The `introduce()` method is a public method that can be called from outside the `Person` class to introduce the person. The `name` and `age` properties cannot be accessed from outside the `Person` class because they are private. To create an object of the `Person` class, you can call its constructor and pass in the `name` and `age` parameters.
 
+## Functional Programming in Kotlin
+
+Functional programming is a programming paradigm that emphasizes the use of functions to solve problems. In this paradigm, functions are treated as first-class citizens, meaning that they can be passed as arguments to other functions, returned as values from functions, and assigned to variables. Functional programming is known for its ability to write concise, declarative, and easily testable code.
+
+In Android development, Kotlin is a popular language that supports functional programming. Here are some key concepts of functional programming and how they can be applied in Android development:
+
+### 1. Pure functions
+
+A pure function is a function that always produces the same output given the same input and has no side effects. Side effects refer to any change to the state of the program outside the function, such as modifying a global variable or printing to the console. Pure functions are important in functional programming because they are easier to reason about, test, and parallelize.
+
+Here's an example of a pure function that calculates the sum of two numbers:
+
+```kotlin
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+```
+
+### 2. Immutability
+
+Immutability refers to the property of an object that cannot be changed once it is created. In functional programming, immutability is important because it makes code more predictable and easier to reason about. Immutable objects can be shared freely between threads without the risk of data races.
+
+Here's an example of an immutable data class in Kotlin:
+
+```kotlin
+data class Person(val name: String, val age: Int)
+```
+
+### 3. Higher-order functions
+
+Higher-order functions are functions that take other functions as arguments or return functions as values. Higher-order functions are a powerful feature of functional programming that allow us to write more flexible and reusable code.
+
+Here's an example of a higher-order function that takes a function as an argument:
+
+```kotlin
+fun applyTwice(value: Int, func: (Int) -> Int): Int {
+    return func(func(value))
+}
+```
+
+### 4. Lambda expressions
+
+Lambda expressions are anonymous functions that can be passed as arguments to higher-order functions. They are a concise way to express behavior and are often used in functional programming.
+
+Here's an example of a lambda expression that adds two numbers:
+
+```kotlin
+val add = { a: Int, b: Int -> a + b }
+```
+
+### 5. Function composition
+
+Function composition is the act of combining two or more functions to create a new function. Function composition is a powerful technique that allows us to write complex logic by combining simple building blocks.
+
+Here's an example of function composition in Kotlin:
+
+```kotlin
+fun square(x: Int) = x * x
+fun addOne(x: Int) = x + 1
+val squareAndAddOne = ::square andThen ::addOne
+```
+
+In the above code, `squareAndAddOne` is a new function that first squares its input and then adds one.
+
+Functional programming can be a powerful tool in Android development. It allows us to write more concise, declarative, and testable code. By applying the key concepts of functional programming, we can create robust and maintainable Android applications.
+
 # Android Basic Topics
 
 ## Project Structure
