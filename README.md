@@ -274,6 +274,85 @@ dog.makeSound() // prints "Woof!"
 
 In this example, the `Animal` class has one method, `makeSound()`, which is overridden in the `Cat` and `Dog` classes. The `Cat` and `Dog` objects are treated as objects of the `Animal`
 
+## Abstraction
+Abstraction is a mechanism that allows you to hide the implementation details of a class from the outside world. In Kotlin, you can achieve abstraction using abstract classes and interfaces.
+
+Abstract Class Example:
+
+```kotlin
+abstract class Shape {
+    abstract fun draw()
+}
+
+class Circle : Shape() {
+    override fun draw() {
+        println("Drawing a circle...")
+    }
+}
+
+val circle = Circle()
+circle.draw() // prints "Drawing a circle..."
+```
+
+In this example, the `Shape` class is an abstract class with one abstract method, `draw()`. The `Circle` class is a concrete implementation of the `Shape` class and overrides the `draw()` method. To create an object of the `Circle` class, you can simply call its constructor.
+
+Interface Example:
+
+```kotlin
+interface Drawable {
+    fun draw()
+}
+
+class Square : Drawable {
+    override fun draw() {
+        println("Drawing a square...")
+    }
+}
+
+val square = Square()
+square.draw() // prints "Drawing a square..."
+```
+
+In this example, the `Drawable` interface defines one method, `draw()`. The `Square` class implements the `Drawable` interface and overrides the `draw()` method. To create an object of the `Square` class, you can simply call its constructor.
+
+## Encapsulation
+Encapsulation is a mechanism that allows you to hide the internal state of an object from the outside world. In Kotlin, you can achieve encapsulation using properties and access modifiers.
+
+Property Example:
+
+```kotlin
+class Person {
+    var name: String = ""
+        private set
+
+    var age: Int = 0
+}
+
+val person = Person()
+person.name = "John Doe"
+person.age = 30
+println(person.name) // prints "John Doe"
+println(person.age) // prints 30
+```
+
+In this example, the `Person` class has two properties, `name` and `age`. The `name` property has a private setter, which means it can only be set within the `Person` class. The `age` property does not have a setter, which means it can only be set within the `Person` class constructor. To create an object of the `Person` class, you can simply call its constructor and set its properties.
+
+Access Modifier Example:
+
+```kotlin
+class Person(private val name: String, private val age: Int) {
+    fun introduce() {
+        println("Hello, my name is $name and I am $age years old")
+    }
+}
+
+val person = Person("John Doe", 30)
+person.introduce() // prints "Hello, my name is John Doe and I am 30 years old"
+println(person.name) // error: cannot access 'name': it is private in 'Person'
+println(person.age) // error: cannot access 'age': it is private in 'Person'
+```
+
+In this example, the `Person` class has two private properties, `name` and `age`. The `introduce()` method is a public method that can be called from outside the `Person` class to introduce the person. The `name` and `age` properties cannot be accessed from outside the `Person` class because they are private. To create an object of the `Person` class, you can call its constructor and pass in the `name` and `age` parameters.
 ## Activities
 An activity is a single screen that a user can interact with. It is defined by a Java class that extends the Activity class or one of its subclasses. Activities are typically used to implement different screens in an app, such as a login screen, a settings screen, or a list of items. Each activity has a corresponding layout file that defines the user interface for that screen.
 
