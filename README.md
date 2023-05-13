@@ -58,7 +58,7 @@ In this section, we will cover the basic syntax and data types in Kotlin.
 ## Variables
 In Kotlin, you can declare variables using either the var or val keyword. Variables declared with var can be reassigned, while those declared with val cannot be reassigned.
 
-```
+```kotlin
 var myVariable = "Hello, world!"
 myVariable = "Goodbye, world!" // OK
 
@@ -76,7 +76,7 @@ Kotlin has several built-in data types:
 * Double: 64-bit floating point number
 * Char: a single 16-bit Unicode character
 * Boolean: true or false
-```
+```kotlin 
 val myByte: Byte = 127
 val myShort: Short = 32767
 val myInt: Int = 2147483647
@@ -89,26 +89,26 @@ val myBoolean: Boolean = true
 ### Type Inference
 In Kotlin, you can use type inference to let the compiler determine the data type of a variable based on its initial value:
 
-```
+```kotlin
 val myString = "Hello, Kotlin!"
 val myInt = 42
 ```
 #### Nullable Types
 * Kotlin has a concept of nullable types, which allows variables to have a null value. You can declare a variable as nullable by adding a ? after the data type:
 
-```
+```kotlin
 var myNullableString: String? = null
 ```
 *  To access the value of a nullable variable, you must use either the safe call operator (?.) or the not-null assertion operator (!!):
 
-```
+```kotlin
 val length = myNullableString?.length // returns null if myNullableString is null
 val length = myNullableString!!.length // throws a NullPointerException if myNullableString is null
 ```
 #### String Interpolation
 * Kotlin supports string interpolation, which allows you to embed variables and expressions within a string:
 
-```
+```kotlin
 val name = "Alice"
 val age = 30
 val message = "My name is $name and I am $age years old."
@@ -118,12 +118,12 @@ val message = "My name is $name and I am $age years old."
 
 * Conditional expressions: In Kotlin, you can use a conditional expression instead of an if-else statement in cases where the result of the expression is either of two values. For example:
 
-```
+```kotlin
 val max = if (a > b) a else b
 ```
 * When expression: Kotlin's when expression is similar to a switch statement in other languages, but it's more powerful and flexible. You can use it to match any type of value, not just integers, and you can use it with ranges, types, and arbitrary expressions. For example:
 
-```
+```kotlin
 when (x) {
     1 -> println("One")
     2 -> println("Two")
@@ -134,7 +134,7 @@ when (x) {
 ```
 * Loops: Kotlin supports the usual while and for loops found in most programming languages, but it also has some additional features such as the ability to loop over ranges and collections. For example:
 
-```
+```kotlin
 for (i in 1..10) {
     println(i)
 }
@@ -146,7 +146,7 @@ for (s in list) {
 ```
 * Return and Jump: Kotlin supports a few additional ways to control the flow of execution, such as the return and break statements, as well as the continue and label statements. For example:
 
-```
+```kotlin
 fun foo() {
     list.forEach {
         if (it == "bar") return
@@ -163,7 +163,7 @@ loop@ for (i in 1..10) {
 ```
 * Exception handling: Kotlin has built-in support for exceptions and offers a try-catch-finally statement to handle them. It also has a throw expression to manually throw an exception. For example:
 
-```
+```kotlin
 try {
     // code that might throw an exception
 } catch (e: Exception) {
@@ -443,3 +443,129 @@ In addition, it is important to ensure that resources are released properly when
 ### Conclusion
 
 The Activity lifecycle is a fundamental concept in Android development. By understanding how Activities are created, destroyed, and maintained, developers can create robust and efficient applications that provide a great user experience. This guide provides a basic overview of the Activity lifecycle, but it is important to dig deeper into the documentation and examples to fully understand the topic.
+
+## XML in Android Development
+
+XML stands for Extensible Markup Language. It is a markup language that is widely used in Android development for describing the layout and appearance of user interface components. The Android SDK provides a set of predefined tags and attributes that you can use to create layouts, styles, themes, and other resources for your Android app.
+
+XML files in Android are stored in the `/res` directory of your Android project and are organized into several subdirectories based on their type. For example, layout files are stored in the `/res/layout` directory, while drawable resources are stored in the `/res/drawable` directory.
+
+## Android Layouts
+
+Android layouts are used to define the visual structure and user interface of an Android app. There are several types of Android layouts, each with its own specific use case:
+
+### 1. Linear Layout
+
+The Linear Layout arranges its child views in a single column or row, depending on the orientation you specify. It is one of the most commonly used layouts in Android development.
+
+```xml
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- child views -->
+</LinearLayout>
+```
+
+### 2. Relative Layout
+
+The Relative Layout allows you to position child views relative to each other or to the parent layout. It is useful when you need to create more complex layouts.
+
+```xml
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+</RelativeLayout>
+```
+
+### 3. Constraint Layout
+
+The Constraint Layout allows you to create complex layouts by defining constraints between views. It is similar to the Relative Layout, but it provides more flexibility and control over the positioning of views.
+
+```xml
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+### 4. Table Layout
+
+The Table Layout arranges its child views in rows and columns, similar to an HTML table. It is useful when you need to display tabular data.
+
+```xml
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+</TableLayout>
+```
+
+### 5. Grid Layout
+
+The Grid Layout arranges its child views in a grid of rows and columns. It is useful when you need to create a layout that adapts to different screen sizes.
+
+```xml
+<androidx.gridlayout.widget.GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+</androidx.gridlayout.widget.GridLayout>
+```
+
+### 6. Frame Layout
+
+The Frame Layout is a simple layout that allows you to stack child views on top of each other. It is useful when you need to display one view at a time.
+
+```xml
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+</FrameLayout>
+```
+
+### 7. Coordinator Layout
+
+The Coordinator Layout is a powerful layout that allows you to create complex, responsive user interfaces. It is used in combination with other layout types to create custom behaviors and animations.
+
+```xml
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
+
+### 8. Drawer Layout
+
+The Drawer Layout is a special type of layout that allows you to create a sliding drawer that appears from the side of the screen. It is commonly used for navigation menus.
+
+```xml
+<androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- child views -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- main content -->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+        <!-- navigation drawer content -->
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
+```
+
+These are some of the most commonly used Android layouts, but there are several others that you can use depending on your specific use case.
+
+## Conclusion
+
+In conclusion, XML is an important part of Android development as it allows you to define the visual layout of your app's user interface. The Android SDK provides a set of predefined layouts that you can use, each with its own specific use case. By using the right layout for your specific needs, you can create visually appealing and functional user interfaces for your Android app.
