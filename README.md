@@ -380,9 +380,6 @@ The `build.gradle` files in the app directory are used to configure and build th
 ## Gradle Wrapper
 The `gradlew` and `gradlew.bat` files are the Gradle wrapper scripts that allow you to run Gradle tasks without installing Gradle on your system. These files are included in the root directory of the project.
 
-## Other Directories
-There are a few other directories in the project that are not part of the `app` directory:
-
 ### Gradle Directory
 The `gradle` directory contains files related to the Gradle build system, such as the `wrapper` directory that stores the Gradle wrapper files.
 
@@ -391,6 +388,9 @@ The `.idea` directory contains configuration files for IntelliJ IDEA, the IDE us
 
 ### Build Directory
 The `build` directory is where the output of the build process is stored, such as the compiled code and the APK file.
+
+## Other Directories
+There are a few other directories in the project that are not part of the `app` directory:
 
 In summary, the `app` directory is where most of the important files in an Android project are located. The `AndroidManifest.xml` file, `java` directory, `res` directory, and Gradle scripts are the most essential files for creating an Android app. The Gradle wrapper, `gradle` directory, `.idea` directory, and `build` directory are important for the build process.
 
